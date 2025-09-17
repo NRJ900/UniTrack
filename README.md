@@ -1,6 +1,6 @@
-# 🎓 UniTrack – SRM Edition
+# 🎓 UniTrack
 
-**UniTrack – SRM Edition** is a responsive web application built using **React** and **Tailwind CSS** to help **SRM University** students manage and calculate their **GPA**, **CGPA**, and **attendance** in a simple and intuitive way.
+**UniTrack ** is a responsive web application built using **React** and **Tailwind CSS** to help ** University** students manage and calculate their **GPA**, **CGPA**, and **attendance** in a simple and intuitive way.
 
 > All calculations are done on the client side – no backend required.
 
