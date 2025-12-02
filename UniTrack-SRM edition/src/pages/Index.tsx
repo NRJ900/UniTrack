@@ -12,6 +12,7 @@ import ProgressChart from '@/components/analytics/ProgressChart';
 import Dashboard from '@/components/dashboard/Dashboard';
 
 import InstallPrompt from '@/components/pwa/InstallPrompt';
+import UserNameDialog from '@/components/user/UserNameDialog';
 
 const Index = () => {
   // Dark mode state
@@ -188,6 +189,8 @@ const Index = () => {
           </a>
         </div>
       </footer>
+
+      <UserNameDialog />
     </div>
   );
 };

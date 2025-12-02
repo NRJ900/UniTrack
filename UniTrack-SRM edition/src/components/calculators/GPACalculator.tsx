@@ -126,7 +126,9 @@ const GPACalculator = () => {
 
                 <div className="flex justify-between items-end mb-6">
                     <div>
-                        <p className="text-sm text-gray-500">Date</p>
+                        <p className="text-sm text-gray-500">Student Name</p>
+                        <p className="font-medium text-lg">{localStorage.getItem('user_name') || 'Student'}</p>
+                        <p className="text-sm text-gray-500 mt-2">Date</p>
                         <p className="font-medium">{new Date().toLocaleDateString()}</p>
                     </div>
                     <div className="text-right">
@@ -267,39 +269,37 @@ const GPACalculator = () => {
                         </p>
                     </div>
                 </CardContent>
-            </Card >
+            </Card>
 
             {/* History Section */}
-            {
-                history.length > 0 && (
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-2 text-lg">
-                                <History className="w-5 h-5 text-gray-500" />
-                                Saved Calculations
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="space-y-4">
-                                {history.map((item) => (
-                                    <div key={item.id} className="flex items-center justify-between p-4 border rounded-lg bg-gray-50 dark:bg-gray-800/50">
-                                        <div>
-                                            <div className="font-bold text-lg text-blue-600 dark:text-blue-400">{item.gpa} GPA</div>
-                                            <div className="text-sm text-gray-500">
-                                                {item.date} • {item.totalCredits} Credits • {item.subjects.length} Subjects
-                                            </div>
+            {history.length > 0 && (
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-lg">
+                            <History className="w-5 h-5 text-gray-500" />
+                            Saved Calculations
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="space-y-4">
+                            {history.map((item) => (
+                                <div key={item.id} className="flex items-center justify-between p-4 border rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                                    <div>
+                                        <div className="font-bold text-lg text-blue-600 dark:text-blue-400">{item.gpa} GPA</div>
+                                        <div className="text-sm text-gray-500">
+                                            {item.date} • {item.totalCredits} Credits • {item.subjects.length} Subjects
                                         </div>
-                                        <Button variant="ghost" size="sm" onClick={() => deleteHistoryItem(item.id)} className="text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20">
-                                            <Trash2 className="w-4 h-4" />
-                                        </Button>
                                     </div>
-                                ))}
-                            </div>
-                        </CardContent>
-                    </Card>
-                )
-            }
-        </div >
+                                    <Button variant="ghost" size="sm" onClick={() => deleteHistoryItem(item.id)} className="text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20">
+                                        <Trash2 className="w-4 h-4" />
+                                    </Button>
+                                </div>
+                            ))}
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
+        </div>
     );
 };
 

@@ -117,7 +117,9 @@ const CGPACalculator = () => {
 
                 <div className="flex justify-between items-end mb-6">
                     <div>
-                        <p className="text-sm text-gray-500">Date</p>
+                        <p className="text-sm text-gray-500">Student Name</p>
+                        <p className="font-medium text-lg">{localStorage.getItem('user_name') || 'Student'}</p>
+                        <p className="text-sm text-gray-500 mt-2">Date</p>
                         <p className="font-medium">{new Date().toLocaleDateString()}</p>
                     </div>
                     <div className="text-right">
