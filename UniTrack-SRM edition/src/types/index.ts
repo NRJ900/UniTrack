@@ -24,3 +24,19 @@ export interface AttendanceResult {
     status: 'Good' | 'Low';
     hoursNeeded?: number;
 }
+
+export interface GPAHistoryItem {
+    id: string;
+    date: string;
+    gpa: string;
+    totalCredits: number;
+    subjects: Subject[];
+}
+
+export interface CGPAHistoryItem {
+    id: string;
+    date: string;
+    cgpa: string;
+    totalSemesters: number;
+    semesters: Semester[];
+}

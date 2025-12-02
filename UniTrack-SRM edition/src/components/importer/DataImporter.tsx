@@ -78,10 +78,10 @@ const DataImporter = () => {
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <DialogTrigger asChild>
-                            <Button variant="outline" className="gap-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 relative">
+                            <Button variant="outline" className="gap-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 relative px-2 md:px-4">
                                 <Upload className="w-4 h-4" />
-                                Import Data
-                                <Badge variant="secondary" className="ml-1 h-5 px-1.5 text-[10px] bg-orange-100 text-orange-700 hover:bg-orange-200 dark:bg-orange-900/30 dark:text-orange-400">
+                                <span className="hidden md:inline">Import Data</span>
+                                <Badge variant="secondary" className="hidden md:inline-flex ml-1 h-5 px-1.5 text-[10px] bg-orange-100 text-orange-700 hover:bg-orange-200 dark:bg-orange-900/30 dark:text-orange-400">
                                     Beta
                                 </Badge>
                             </Button>
