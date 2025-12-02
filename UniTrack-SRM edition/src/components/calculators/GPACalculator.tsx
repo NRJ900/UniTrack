@@ -10,6 +10,8 @@ import { Subject } from '@/types';
 import { GRADE_POINTS } from '@/lib/constants';
 import { calculateGPA } from '@/lib/calculations';
 
+import DataImporter from '@/components/importer/DataImporter';
+
 const GPACalculator = () => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [subjects, setSubjects] = useState<Subject[]>([
@@ -80,6 +82,7 @@ const GPACalculator = () => {
                         GPA Calculator
                     </CardTitle>
                     <div className="flex gap-2">
+                        <DataImporter />
                         <Button variant="ghost" size="sm" onClick={resetCalculator} className="text-gray-500 hover:text-red-500">
                             <RotateCcw className="w-4 h-4 mr-1" /> Reset
                         </Button>

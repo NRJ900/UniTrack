@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calculator, GraduationCap, Calendar, Sun, Moon, Target, TrendingUp, Home, LayoutDashboard } from 'lucide-react';
+import { Calculator, GraduationCap, Calendar, Sun, Moon, Target, TrendingUp, Home, LayoutDashboard, Github } from 'lucide-react';
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Helmet } from 'react-helmet-async';
@@ -8,7 +8,7 @@ import CGPACalculator from '@/components/calculators/CGPACalculator';
 import AttendanceCalculator from '@/components/calculators/AttendanceCalculator';
 import TargetGPACalculator from '@/components/calculators/TargetGPACalculator';
 import ProgressChart from '@/components/analytics/ProgressChart';
-import DataImporter from '@/components/importer/DataImporter';
+
 import Dashboard from '@/components/dashboard/Dashboard';
 
 import InstallPrompt from '@/components/pwa/InstallPrompt';
@@ -59,7 +59,7 @@ const Index = () => {
           <div className="text-center pt-12 md:pt-0">
             <h1 className="text-4xl font-bold mb-2">UniTrack – SRM Edition</h1>
             <p className="text-xl opacity-90 mb-4">Your Academic Progress Companion</p>
-            <DataImporter />
+
           </div>
         </div>
       </div>
@@ -166,6 +166,15 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-300">UniTrack – SRM Edition | Built for SRM Students</p>
           <p className="text-sm text-gray-400 mt-1">All calculations are performed client-side for privacy</p>
+          <a
+            href="https://github.com/NRJ900/UniTrack"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-4 text-gray-400 hover:text-white transition-colors text-sm"
+          >
+            <Github className="w-4 h-4" />
+            View on GitHub
+          </a>
         </div>
       </footer>
     </div>
