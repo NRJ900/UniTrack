@@ -2,7 +2,9 @@
 
 **UniTrack ** is a responsive web application built using **React** and **Tailwind CSS** to help ** University** students manage and calculate their **GPA**, **CGPA**, and **attendance** in a simple and intuitive way.
 
-> All calculations are done on the client side – no backend required.
+> All calculations are done on the client side – no backend used to store data.
+
+> All data stored locally on your device.
 
 ---
 
@@ -75,7 +77,7 @@ npm install
 ```bash
 npm run dev
 ```
-The app will be live at http://localhost:5173/ (if using Vite)
+The app will be live at http://localhost:xxxx/
 
 --- 
 
